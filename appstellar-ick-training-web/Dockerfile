@@ -2,7 +2,7 @@ FROM node:18
 
 WORKDIR /usr/appstellar-stellar-web
 
-COPY package*.json /usr/appstellar-stellar-web
+COPY package*.json /usr/appstellar-stellar-web/
 
 RUN npm install
 
