@@ -7,7 +7,7 @@ hostname: nderim.appstellar.training
 ingressName: db-ingress
 serviceName: db-service
 servicePort: 80
-containerPort: 3000
+containerPort: 80
 containerName: nginx
 containerImageName: nginx:1.16.1
 dbHostname: db.hostname
