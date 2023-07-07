@@ -3,7 +3,7 @@ namespace: webapp-nderim
 configMapName: db-configmap
 secretName: db-secret
 deploymentName: db-deployment
-hostname: nderim.bunjaku.appstellar.training
+hostname: nderim.appstellar.training
 ingressName: db-ingress
 serviceName: db-service
 servicePort: 80
