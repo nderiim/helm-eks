@@ -12,3 +12,4 @@ containerName: nginx
 containerImageName: nginx:1.16.1
 dbHostname: db.hostname
 dbPassword: mydbpw
+ingressClassName: alb
