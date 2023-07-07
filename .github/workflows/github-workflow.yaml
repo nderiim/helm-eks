@@ -43,4 +43,4 @@ jobs:
         run: aws eks update-kubeconfig --name=my-eks-cluster --region=${{ env.AWS_REGION }}
 
       - name: Deploy Helm Chart
-        run: helm upgrade webapp-nderim ../webapp --install
+        run: helm upgrade webapp-nderim ./webapp --install
