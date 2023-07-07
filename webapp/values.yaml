@@ -7,9 +7,9 @@ hostname: nderim.appstellar.training
 ingressName: db-ingress
 serviceName: db-service
 servicePort: 80
-containerPort: 80
-containerName: nginx
-containerImageName: nginx:1.16.1
+containerPort: 3000
+containerName: next-js
+containerImageName: 313422618945.dkr.ecr.eu-central-1.amazonaws.com/nderim:dev
 dbHostname: db.hostname
 dbPassword: mydbpw
 ingressClassName: alb
