@@ -18,6 +18,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+      # CI
+      
       - name: Setup AWS/CLI
         uses: aws-actions/configure-aws-credentials@v2
         with:
@@ -33,14 +35,16 @@ jobs:
           docker tag webapp ${{ env.AWS_ECR_URI }}:dev
           docker push ${{ env.AWS_ECR_URI }}:dev
 
-      - name: Install Helm
-        run: |
-          curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-          chmod 700 get_helm.sh
-          ./get_helm.sh
+      # CD
 
-      - name: Setup kube-config
-        run: aws eks update-kubeconfig --name=my-eks-cluster --region=${{ env.AWS_REGION }}
+      # - name: Install Helm
+      #   run: |
+      #     curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+      #     chmod 700 get_helm.sh
+      #     ./get_helm.sh
 
-      - name: Deploy Helm Chart
-        run: helm upgrade webapp-nderim ./webapp --install
+      # - name: Setup kube-config
+      #   run: aws eks update-kubeconfig --name=my-eks-cluster --region=${{ env.AWS_REGION }}
+
+      # - name: Deploy Helm Chart
+      #   run: helm upgrade webapp-nderim ./webapp --install
